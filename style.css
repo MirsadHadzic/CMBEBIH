@@ -27,7 +27,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .skip-link:focus { transform: translateY(0); }
 .site-header { position: sticky; z-index: 100; top: 0; height: 78px; color: white; background: rgba(7, 27, 44, .96); border-bottom: 1px solid rgba(255,255,255,.09); backdrop-filter: blur(16px); }
 .header-inner { width: min(1320px, calc(100% - 64px)); height: 100%; margin: auto; display: flex; align-items: center; justify-content: space-between; }
-.wordmark { display: inline-flex; align-items: center; gap: 11px; color: white; }
+.wordmark { display: inline-flex; align-items: center; color: white; }
+.wordmark img { display: block; width: 120px; height: 48px; object-fit: contain; filter: brightness(0) invert(1); }
 .wordmark > span:last-child { display: grid; line-height: 1.12; }
 .wordmark strong { font-family: var(--font-display); font-size: 17px; font-weight: 800; letter-spacing: .09em; }
 .wordmark small { margin-top: 5px; font-size: 8px; letter-spacing: .2em; color: #a8b7bd; }
@@ -88,6 +89,11 @@ h1, h2, h3, p { margin-top: 0; }
 .intro-copy .button { margin: 8px 0 15px; }
 .intro-copy .edition-intro { margin: 0 0 10px; color: var(--muted); font-size: 12px; line-height: 1.8; }
 .intro-copy > p:not(.lead), .committees-inner > div:last-child > p:not(.lead) { max-width: 480px; color: var(--muted); line-height: 1.9; }
+.bridge-story { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; align-items: center; padding-top: 85px; margin-top: 82px; border-top: 1px solid #e0e5df; }
+.bridge-story blockquote { margin: 0; padding-left: 28px; border-left: 3px solid #c9a344; color: var(--ink); font-family: var(--font-display); font-size: clamp(24px, 3vw, 37px); font-weight: 700; letter-spacing: -.05em; line-height: 1.2; }
+.bridge-story blockquote em { color: #16847f; }
+.bridge-story > div p { margin: 0 0 18px; color: #515c61; font-size: 13px; line-height: 1.85; }
+.bridge-story > div p:last-child { margin-bottom: 0; }
 .text-link { display: inline-flex; align-items: center; gap: 13px; margin-top: 12px; padding-bottom: 6px; border-bottom: 1px solid #72b9b1; color: #176f70; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
 .text-link:hover { color: var(--ink); }
 .value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 84px; }
@@ -261,6 +267,17 @@ h1, h2, h3, p { margin-top: 0; }
 .committees-inner .lead { color: #e0e9e7; font-size: 17px; }
 .committees-inner > div:last-child > p:not(.lead) { color: #b3c5c6; font-size: 12px; }
 .committees-inner .text-link { color: var(--lime); border-color: #8cae77; }
+.scientific-committee { margin-top: 82px; }
+.scientific-committee .eyebrow { margin-bottom: 10px; }
+.scientific-committee h3 { margin: 0; font-family: var(--font-display); font-size: clamp(28px, 3vw, 40px); letter-spacing: -.055em; }
+.scientific-committee-note { margin: 10px 0 27px; color: #b3c5c6; font-size: 12px; }
+.scientific-committee-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(7, auto); grid-auto-flow: column; gap: 9px 13px; }
+.scientific-committee-grid article { display: grid; gap: 3px; min-height: 60px; padding: 11px 13px; border: 1px solid rgba(255,255,255,.1); border-radius: 7px; color: var(--ink); background: #f5f3ef; }
+.scientific-committee-grid strong { font-size: 11px; line-height: 1.35; }
+.scientific-committee-grid span { color: #758087; font-size: 9px; line-height: 1.4; }
+.scientific-committee-grid .scientific-committee-tbc { border: 1px dashed rgba(211,243,107,.45); background: rgba(255,255,255,.04); }
+.scientific-committee-tbc strong { color: var(--lime); }
+.scientific-committee-tbc span { color: #b3c5c6; }
 .venue-section { position: relative; min-height: 650px; overflow: hidden; background: #e8eee8; }
 .venue-content { position: relative; z-index: 1; padding-top: 5px; }
 .venue-content > p:not(.eyebrow) { max-width: 450px; color: #69777b; font-size: 13px; line-height: 1.9; }
@@ -286,6 +303,20 @@ h1, h2, h3, p { margin-top: 0; }
 .edition-list > a b { font-family: var(--font-display); font-size: 12px; font-weight: 700; }
 .edition-list > a small { color: #77868a; font-size: 9px; }
 .edition-list > a i { color: #438d87; font-style: normal; }
+.organizers-section { background: #fff; }
+.organizers-heading { max-width: 800px; margin: 0 auto 43px; text-align: center; }
+.organizers-heading .eyebrow { margin-bottom: 12px; }
+.organizers-heading .display-heading { font-size: clamp(38px, 4.7vw, 58px); }
+.organizers-heading > p:last-child { max-width: 610px; margin: 16px auto 0; color: #758087; font-size: 13px; line-height: 1.8; }
+.organizer-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.organizer-card { display: flex; min-height: 180px; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 22px 18px; border: 1px solid #e8ebe8; border-radius: 18px; text-align: center; }
+.organizer-card img { width: min(170px, 80%); height: 64px; margin-bottom: 5px; object-fit: contain; }
+.organizer-card strong { max-width: 300px; font-size: 12px; line-height: 1.45; }
+.organizer-card span { color: #16847f; font-size: 10px; font-weight: 600; }
+.eu-funding { display: flex; align-items: center; gap: 18px; margin-top: 24px; padding: 20px 24px; border-radius: 16px; color: #d5dfdf; background: var(--navy); }
+.eu-funding > div { display: flex; align-items: center; gap: 17px; }
+.eu-funding > div > img { width: 72px; height: 48px; flex: 0 0 auto; object-fit: contain; }
+.eu-funding p { margin: 0; color: #aab9bd; font-size: 10px; line-height: 1.7; }
 .updates-section { padding: 76px 0; color: white; background: #0e2d3d; }
 .updates-inner { display: flex; align-items: center; justify-content: space-between; gap: 35px; }
 .updates-inner .eyebrow { margin-bottom: 13px; color: #94b5af; }
@@ -305,24 +336,9 @@ h1, h2, h3, p { margin-top: 0; }
 .footer-contact .contact-line { display: block; margin: 8px 0; color: #d3dddd; font-size: 10px; }
 .footer-contact .contact-address { color: #9babad; }
 .footer-contact .footer-register { display: block; width: fit-content; margin-top: 23px; padding: 10px 13px; border: 1px solid rgba(211,243,107,.35); }
-.partner-strip { display: grid; grid-template-columns: .8fr .8fr 1.4fr; gap: 35px; padding-top: 24px; padding-bottom: 23px; border-top: 1px solid rgba(255,255,255,.13); border-bottom: 1px solid rgba(255,255,255,.13); }
-.partner-strip > div { display: flex; min-height: 72px; flex-direction: column; align-items: flex-start; justify-content: space-between; }
-.partner-strip .footer-label { margin-bottom: 8px; font-size: 8px; }
-.partner-strip img { max-width: 100px; max-height: 40px; object-fit: contain; object-position: left center; filter: grayscale(1) brightness(0) invert(1); opacity: .75; }
-.partner-strip .verlab-logo { width: 95px; object-fit: contain; }
-.partner-logos { display: flex; height: 40px; align-items: center; gap: 22px; }
-.partner-logos img:nth-child(1) { width: 77px; }
-.partner-logos img:nth-child(2) { width: 88px; }
-.partner-logos img:nth-child(3) { width: 77px; }
-.project-partners { display: flex; flex-wrap: wrap; gap: 13px 22px; padding: 19px 0; border-bottom: 1px solid rgba(255,255,255,.13); }
-.project-partners > span { flex-basis: 100%; color: #71878d; font-size: 8px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
-.project-partners a { color: #c1cece; font-size: 9px; font-weight: 600; }
-.project-partners a:hover { color: var(--lime); }
-.project-partners .partner-text { flex-basis: auto; color: #c1cece; font-size: 9px; font-weight: 600; letter-spacing: normal; text-transform: none; }
 .partner-coming-soon { display: flex; align-items: baseline; gap: 18px; padding-top: 16px; }
 .partner-coming-soon > span { color: #aab9bd; font-size: 8px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .partner-coming-soon p { margin: 0; color: #77898e; font-size: 8px; }
-.project-disclaimer { max-width: 900px; margin: 0 auto; padding: 12px 0 0; color: #829195; font-size: 8px; line-height: 1.65; }
 .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 18px; padding-bottom: 18px; color: #75868b; font-size: 8px; }
 .footer-bottom span:nth-child(2) { max-width: 420px; }
 .footer-bottom a { color: #b4c3c4; white-space: nowrap; }
@@ -353,6 +369,7 @@ h1, h2, h3, p { margin-top: 0; }
   .intro-grid, .authors-layout, .editions-layout { grid-template-columns: 1fr; gap: 34px; }
   .intro-grid { align-items: start; }
   .intro-copy { max-width: 620px; }
+  .bridge-story { grid-template-columns: 1fr; gap: 25px; padding-top: 45px; margin-top: 55px; }
   .value-grid { margin-top: 57px; }
   .mission-grid { margin-top: 35px; }
   .story-note { grid-template-columns: 1fr; gap: 10px; }
@@ -370,6 +387,8 @@ h1, h2, h3, p { margin-top: 0; }
   .committee-groups { grid-template-columns: 1fr; }
   .committee-groups article { min-height: auto; }
   .committee-groups h3 { margin-top: 16px; }
+  .scientific-committee-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; grid-auto-flow: row; }
+  .organizer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .venue-art { width: 70%; opacity: .55; }
   .footer-main { gap: 35px; }
 }
@@ -433,10 +452,9 @@ h1, h2, h3, p { margin-top: 0; }
   .footer-main { grid-template-columns: 1fr 1fr; gap: 32px 22px; padding-top: 51px; padding-bottom: 38px; }
   .footer-brand { grid-column: 1 / -1; }
   .footer-contact { grid-column: 1 / -1; }
-  .partner-strip { grid-template-columns: 1fr 1fr; gap: 25px; }
-  .partner-strip > div:last-child { grid-column: 1 / -1; }
-  .partner-strip .partner-logos { gap: 16px; }
-  .partner-logos img:nth-child(1), .partner-logos img:nth-child(2), .partner-logos img:nth-child(3) { max-width: 72px; }
+  .scientific-committee-grid, .organizer-grid { grid-template-columns: 1fr; }
+  .eu-funding { padding: 18px; }
+  .eu-funding > div { align-items: flex-start; flex-direction: column; gap: 10px; }
   .partner-coming-soon { align-items: flex-start; flex-direction: column; gap: 5px; }
   .footer-bottom { align-items: flex-start; flex-direction: column; gap: 8px; }
 }
