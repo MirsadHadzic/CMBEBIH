@@ -1,0 +1,19 @@
+{
+  "name": "cmbebih-2027",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CMBEBIH 2027 conference website and registration email service",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "multer": "^2.0.2",
+    "nodemailer": "^10.3.1"
+  }
+}
