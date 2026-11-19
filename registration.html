@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071b2c">
+  <meta name="description" content="Registration categories, fees, payment details and the CMBEBIH 2027 registration form.">
+  <title>Registration | CMBEBIH 2027</title>
+  <link rel="icon" type="image/png" href="img/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="index.html" aria-label="CMBEBIH 2027 home"><img src="img/logo-dark.png" alt="CMBEBIH"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="program.html">Scientific program</a>
+        <a href="authors.html">For authors</a>
+        <a href="registration.html" aria-current="page">Registration</a>
+        <a href="venue.html">Venue &amp; travel</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero page-hero-registration" aria-labelledby="page-title">
+      <div class="page-width page-hero-inner">
+        <div class="page-hero-copy"><p class="eyebrow">CMBEBIH 2027 / 04</p><h1 id="page-title">Registration</h1><p>Choose your registration category, review payment details and register for CMBEBIH 2027.</p></div>
+        <div class="page-hero-art" aria-hidden="true"><span>04</span><i></i><i></i><i></i></div>
+      </div>
+    </section>
+
+<section class="registration-section section-pad" id="registration">
+      <div class="page-width">
+        <div class="section-heading registration-heading">
+          <div><p class="eyebrow">04 / Registration</p><h2 class="display-heading">Be part of<br><span class="text-gradient">the conversation.</span></h2></div>
+          <p class="section-aside">Complete your registration and attach proof of payment. All registration fields and proof of payment are required.</p>
+        </div>
+        <div class="registration-steps" aria-label="How to register">
+          <article><span>01</span><div><h3>Select your category</h3><p>Choose the registration type that applies to you.</p></div></article>
+          <article><span>02</span><div><h3>Complete your payment</h3><p>Pay the registration fee by bank transfer using the details below.</p></div></article>
+          <article><span>03</span><div><h3>Submit your registration</h3><p>Complete the form and upload your proof of payment.</p></div></article>
+        </div>
+        <div class="registration-grid">
+          <aside class="fees-panel">
+            <div class="panel-top"><span class="eyebrow">Registration fees</span><span class="fee-currency">EUR</span></div>
+            <h3>Choose your<br>registration type.</h3>
+            <p class="fee-note">Early-bird dates will be announced. Select your payment period in the form.</p>
+            <div class="fees-table" role="table" aria-label="Registration fees in euros">
+              <div class="fees-row fees-head" role="row"><span role="columnheader">Category</span><span role="columnheader">Early bird</span><span role="columnheader">Regular</span></div>
+              <div class="fees-row" role="row"><span role="cell">Member</span><strong role="cell">€400</strong><strong role="cell">€450</strong></div>
+              <div class="fees-row" role="row"><span role="cell">Industry professional</span><strong role="cell">€550</strong><strong role="cell">€650</strong></div>
+              <div class="fees-row" role="row"><span role="cell">Student with paper</span><strong role="cell">€250</strong><strong role="cell">€450</strong></div>
+              <div class="fees-row" role="row"><span role="cell">Student participant</span><strong role="cell">€50</strong><strong role="cell">€80</strong></div>
+            </div>
+            <p class="member-note">Member rate applies to academic staff or industry professionals who are members of IFMBE, EAMBES or national MBE societies affiliated with IFMBE and EAMBES.</p>
+            <div class="group-discount"><span class="discount-icon" aria-hidden="true">%</span><p><strong>Coming as a group?</strong><br>Groups of more than 3 participants from one organization receive a 15% discount on registration costs.</p></div>
+            <div class="payment-note"><span class="payment-note-icon" aria-hidden="true">↗</span><p><strong>Payment by bank transfer</strong><br>Pay the fee before registering, then attach your payment confirmation to the form.</p></div>
+            <div class="bank-details">
+              <div class="bank-heading"><h4>Bank transfer details</h4><p>Choose the account type for your transfer.</p></div>
+              <div class="bank-tabs" role="tablist" aria-label="Bank transfer type">
+                <button class="bank-tab is-active" id="domestic-tab" type="button" role="tab" aria-selected="true" aria-controls="domestic-payment" data-payment-tab="domestic">From Bosnia and Herzegovina</button>
+                <button class="bank-tab" id="international-tab" type="button" role="tab" aria-selected="false" aria-controls="international-payment" data-payment-tab="international" tabindex="-1">International payments</button>
+              </div>
+              <div class="bank-panel" id="domestic-payment" role="tabpanel" aria-labelledby="domestic-tab" data-payment-panel="domestic">
+                <div class="bank-field"><span>Beneficiary</span><strong>Društvo za medicinski i biološki inžinjering u BiH (DMBIUBIH)</strong><button type="button" class="copy-detail" data-copy="Društvo za medicinski i biološki inžinjering u BiH (DMBIUBIH)" aria-label="Copy beneficiary">Copy</button></div>
+                <div class="bank-field"><span>Bank</span><strong>Privredna banka Sarajevo d.d. Sarajevo</strong><button type="button" class="copy-detail" data-copy="Privredna banka Sarajevo d.d. Sarajevo" aria-label="Copy bank name">Copy</button></div>
+                <div class="bank-field"><span>Account number</span><strong>101-104-00712649-16</strong><button type="button" class="copy-detail" data-copy="101-104-00712649-16" aria-label="Copy account number">Copy</button></div>
+                <div class="bank-field"><span>Payment purpose</span><strong>CMBEBIH 2027 Registration Fee</strong><button type="button" class="copy-detail" data-copy="CMBEBIH 2027 Registration Fee" aria-label="Copy payment purpose">Copy</button></div>
+              </div>
+              <div class="bank-panel" id="international-payment" role="tabpanel" aria-labelledby="international-tab" data-payment-panel="international" hidden>
+                <div class="bank-field"><span>Beneficiary</span><strong>Društvo za medicinski i biološki inžinjering u BiH</strong><button type="button" class="copy-detail" data-copy="Društvo za medicinski i biološki inžinjering u BiH" aria-label="Copy beneficiary">Copy</button></div>
+                <div class="bank-field"><span>Beneficiary address</span><strong>Obala Kulina bana 18, 71000 Sarajevo</strong><button type="button" class="copy-detail" data-copy="Obala Kulina bana 18, 71000 Sarajevo" aria-label="Copy beneficiary address">Copy</button></div>
+                <div class="bank-field"><span>Beneficiary bank</span><strong>Privredna banka Sarajevo d.d. Sarajevo</strong><button type="button" class="copy-detail" data-copy="Privredna banka Sarajevo d.d. Sarajevo" aria-label="Copy bank name">Copy</button></div>
+                <div class="bank-field"><span>SWIFT / BIC</span><strong>PBSCBA22</strong><button type="button" class="copy-detail" data-copy="PBSCBA22" aria-label="Copy SWIFT code">Copy</button></div>
+                <div class="bank-field"><span>IBAN</span><strong>BA39 1011 0400 7126 4916</strong><button type="button" class="copy-detail" data-copy="BA39 1011 0400 7126 4916" aria-label="Copy IBAN">Copy</button></div>
+                <div class="bank-field"><span>Payment purpose</span><strong>CMBEBIH 2027 Registration Fee</strong><button type="button" class="copy-detail" data-copy="CMBEBIH 2027 Registration Fee" aria-label="Copy payment purpose">Copy</button></div>
+              </div>
+              <p class="bank-important">Transfer the amount for your registration category. Presenting authors should include their Paper ID in the payment reference, if available. Any bank transfer charges must be covered by the sender.</p>
+            </div>
+          </aside>
+
+          <form class="registration-form" id="registration-form" enctype="multipart/form-data" novalidate>
+            <div class="form-heading"><div><span class="form-step">01</span><h3>CMBEBIH 2027 registration</h3></div><p>All fields marked <span aria-hidden="true">*</span> are required.</p></div>
+            <div class="form-grid">
+              <label class="field"><span>First name <b>*</b></span><input name="firstName" autocomplete="given-name" required maxlength="80" placeholder="Your first name"></label>
+              <label class="field"><span>Last name <b>*</b></span><input name="lastName" autocomplete="family-name" required maxlength="80" placeholder="Your last name"></label>
+              <label class="field field-full"><span>Email address <b>*</b></span><input type="email" name="email" autocomplete="email" required maxlength="254" placeholder="you@institution.org"></label>
+              <label class="field field-full"><span>Institution / organization <b>*</b></span><input name="institution" autocomplete="organization" required maxlength="160" placeholder="Institution or organization name"></label>
+              <label class="field"><span>Country <b>*</b></span><input name="country" autocomplete="country-name" required maxlength="80" placeholder="Your country"></label>
+              <label class="field"><span>Registration category <b>*</b></span>
+                <select name="category" id="registration-category" required>
+                  <option value="" selected disabled>Select a category</option>
+                  <option value="member">Member</option>
+                  <option value="industry">Industry Professional</option>
+                  <option value="student-paper">Student with Paper Presentation</option>
+                  <option value="student-participant">Student Participant</option>
+                </select>
+              </label>
+              <label class="field field-full"><span>Registration fee / payment period <b>*</b></span>
+                <select name="feePeriod" id="fee-period" required>
+                  <option value="" selected disabled>Select a period</option>
+                  <option value="early">Early Bird</option>
+                  <option value="regular">Regular</option>
+                </select>
+                <small class="field-hint" id="fee-summary" aria-live="polite">Choose a category and payment period to see your fee.</small>
+              </label>
+              <fieldset class="field field-full conditional-field" id="presenting-author-field" hidden>
+                <legend>Are you registering as a presenting author? <b>*</b></legend>
+                <div class="radio-row">
+                  <label class="radio-option"><input type="radio" name="presentingAuthor" value="yes"><span>Yes</span></label>
+                  <label class="radio-option"><input type="radio" name="presentingAuthor" value="no"><span>No</span></label>
+                </div>
+              </fieldset>
+              <label class="field field-full conditional-field" id="paper-title-field" hidden><span>Paper title <b>*</b></span><input name="paperTitle" id="paper-title" maxlength="300" placeholder="Full title of your scientific paper"></label>
+              <label class="field field-full conditional-field" id="paper-id-field" hidden><span>Paper ID <span class="optional">(optional)</span></span><input name="paperId" maxlength="80" placeholder="Meteor submission ID"></label>
+              <div class="field field-full">
+                <span class="field-label">Proof of payment <b>*</b></span>
+                <label class="upload-zone" for="proof-of-payment" id="upload-zone">
+                  <input type="file" id="proof-of-payment" name="proofOfPayment" accept=".pdf,.jpg,.jpeg,application/pdf,image/jpeg" required>
+                  <span class="upload-icon" aria-hidden="true">↑</span>
+                  <span class="upload-copy"><strong>Choose a file or drag it here</strong><small>PDF, JPG or JPEG · 10 MB maximum</small><span class="file-status" id="file-status" aria-live="polite"></span></span>
+                </label>
+              </div>
+              <label class="consent-check field-full"><input type="checkbox" name="consent" value="yes" required><span>I confirm that the information provided is accurate and complete. I consent to the processing of my personal data by the CMBEBIH 2027 organizers for registration, payment verification, conference administration and communication about my participation. <b>*</b></span></label>
+              <label class="honeypot" aria-hidden="true">Leave this field empty<input name="website" tabindex="-1" autocomplete="off"></label>
+              <div class="form-submit field-full"><button class="button button-lime submit-button" type="submit"><span>Submit registration</span><span aria-hidden="true">↗</span></button><p class="form-privacy">Your payment proof is sent securely with your registration and is not stored on this website.</p></div>
+            </div>
+            <div class="form-message" id="form-message" role="status" aria-live="polite" hidden></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="page-width footer-main">
+      <div class="footer-brand"><a class="wordmark" href="index.html" aria-label="CMBEBIH 2027 home"><img src="img/logo-dark.png" alt="CMBEBIH"></a><p>From science to business.<br>Sarajevo, Bosnia and Herzegovina.</p><a class="footer-email" href="mailto:cmbebih@gmail.com">cmbebih@gmail.com <span aria-hidden="true">&#8599;</span></a></div>
+      <div class="footer-nav"><span class="footer-label">Explore</span><a href="about.html">About</a><a href="program.html">Scientific program</a><a href="authors.html">For authors</a><a href="registration.html">Registration</a><a href="venue.html">Venue &amp; travel</a><a href="https://cmbebih.com/past-conferences/" target="_blank" rel="noopener noreferrer">Past conferences &#8599;</a></div>
+      <div class="footer-contact"><span class="footer-label">Conference organizing committee office</span><p>Questions about registration, submissions or the conference?</p><a class="contact-line" href="mailto:cmbebih@gmail.com">cmbebih@gmail.com</a><a class="contact-line" href="tel:+38733569540">+387 33 56 95 40</a><p class="contact-line contact-address">Obala Kulina bana 18, 71000 Sarajevo<br>Bosnia and Herzegovina</p><a class="footer-register" href="registration.html">Register for CMBEBIH 2027 <span aria-hidden="true">&#8599;</span></a></div>
+    </div>
+    <div class="page-width partner-coming-soon"><span>Additional sponsors &amp; media partners</span><p>Listings will be added as partnerships are confirmed.</p></div>
+    <div class="page-width footer-bottom"><span>&#169; 2027 CMBEBIH &middot; From Science to Business</span><a href="#top">Back to top &uarr;</a></div>
+  </footer>
+</body>
+</html>

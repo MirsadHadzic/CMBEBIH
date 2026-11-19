@@ -43,6 +43,12 @@
     }
   });
 
+  if (!form) {
+    if (document.querySelector("[data-countdown]")) startCountdown();
+    if (document.querySelector(".hero-canvas")) startHeroVisual();
+    return;
+  }
+
   const paymentTabs = [...document.querySelectorAll("[data-payment-tab]")];
   const paymentPanels = [...document.querySelectorAll("[data-payment-panel]")];
 
@@ -244,7 +250,6 @@
       submitButton.querySelector("span:first-child").textContent = "Submit registration";
     }
   });
-
   function startCountdown() {
     const target = new Date("2027-10-14T09:00:00+02:00").getTime();
     const update = () => {
@@ -331,6 +336,6 @@
     });
   }
 
-  startCountdown();
-  startHeroVisual();
+  if (document.querySelector("[data-countdown]")) startCountdown();
+  if (document.querySelector(".hero-canvas")) startHeroVisual();
 })();

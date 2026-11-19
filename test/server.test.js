@@ -1,6 +1,6 @@
 const assert = require("node:assert/strict");
 const test = require("node:test");
-const { validateProof, validateRegistration } = require("../server");
+const { app, validateProof, validateRegistration } = require("../server");
 
 function makePdf(name = "proof.pdf") {
   return {
@@ -67,4 +67,28 @@ test("validates category fees and consent server-side", () => {
   const errors = validateRegistration(registration({ feeAmount: "1", consent: "no" }), makePdf()).errors;
   assert.ok(errors.some((error) => /fee does not match/.test(error)));
   assert.ok(errors.some((error) => /Consent/.test(error)));
+});
+
+test("serves each conference section as a separate page", async (t) => {
+  const server = app.listen(0);
+  await new Promise((resolve) => server.once("listening", resolve));
+  t.after(() => new Promise((resolve, reject) => {
+    server.close((error) => error ? reject(error) : resolve());
+  }));
+
+  const origin = `http://127.0.0.1:${server.address().port}`;
+  for (const [file, pageName] of [
+    ["about.html", "About CMBEBIH"],
+    ["program.html", "Scientific program"],
+    ["authors.html", "For authors"],
+    ["registration.html", "Registration"],
+    ["venue.html", "Venue &amp; travel"]
+  ]) {
+    const response = await fetch(`${origin}/${file}`);
+    assert.equal(response.status, 200, `${file} should be available`);
+    const html = await response.text();
+    assert.ok(html.includes(`<h1 id="page-title">${pageName}</h1>`));
+    assert.match(html, /class="page-hero /);
+    assert.match(html, /aria-current="page"/);
+  }
 });
